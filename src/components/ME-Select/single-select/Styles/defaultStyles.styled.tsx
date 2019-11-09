@@ -1,14 +1,12 @@
 import styled, { StyledComponent } from 'styled-components';
 
 export const DropdownContainer: StyledComponent<"div", any, {}, never> = styled.div({
-  background: 'ghostwhite',
-
-  display: 'flex',
+  display: 'box',
   position: 'relative',
   justifyContent: 'center',
   alignItems: 'center',
-  width: '350px',
-  height: '38px',
+  minWidth: '350px',
+  minHeight: '38px',
   padding: '10px',
   margin: '5px',
 });
@@ -19,7 +17,7 @@ export const SelectContainerWrap: StyledComponent<"div", any, {}, never> = style
   alignItems: 'center',
   width: '100%',
   height: '100%',
-  minHeight: '38px',
+  minHeight: '20px',
   minWidth: '115px'
 });
 
@@ -37,11 +35,11 @@ export const ControlWrap: StyledComponent<"div", any, {}, never> = styled.div({
   alignItems: 'center',
   width: '100%',
   height: '100%',
-  minHeight: '38px',
+  minHeight: '20px',
   minWidth: '115px',
   borderRadius: '1px solid black',
   padding: '5px',
-  background: 'grey',
+  background: 'ghostwhite',
   color: 'white',
 });
 

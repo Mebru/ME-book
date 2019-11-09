@@ -6,7 +6,10 @@ import { ISelectProps } from '../single-select/types';
 const DefaultSelectProps: ISelectProps = {
   selectType: 'Default',
   className: '',
-  options: []
+  options: [
+    { value: 'red', label: 'red' },
+    { value: 'blue', label: 'blue' }
+  ]
 };
 const SingleSelectProps: ISelectProps = {
   name: 'SingleSelect',
@@ -14,33 +17,39 @@ const SingleSelectProps: ISelectProps = {
   className: '',
   classNamePrefix: '',
   isMulti: false,
-  options: []
-  // menuIsOpen: false
+  options: [
+    { value: 'red', label: 'red' },
+    { value: 'blue', label: 'blue' }
+  ]
 };
 
 const ME_DefaultSelect = () => {
   const { selectType, options, className } = DefaultSelectProps;
   return (
-    <ME_Select
-      id={selectType + '_' + className}
-      selectType={selectType}
-      options={options}
-    />
+    <div style={{ display: 'flex', width: '400px', height: '38px' }}>
+      <ME_Select
+        id={selectType + '_' + className}
+        selectType={selectType}
+        options={options}
+      />
+    </div>
   );
 };
 const ME_SingleSelect = () => {
   const { selectType, name, className, classNamePrefix, isMulti, options, ...rest } = SingleSelectProps;
   return (
-    <ME_Select
-      id={selectType + '_' + className}
-      selectType={selectType}
-      name={name}
-      className={className}
-      classNamePrefix={classNamePrefix}
-      isMulti={isMulti}
-      options={options}
-      {...rest}
-    />
+    <div style={{ display: 'flex', width: '400px', height: '38px' }}>
+      <ME_Select
+        id={selectType + '_' + className}
+        selectType={selectType}
+        name={name}
+        className={className}
+        classNamePrefix={classNamePrefix}
+        isMulti={isMulti}
+        options={options}
+        {...rest}
+      />
+    </div>
   );
 };
 
