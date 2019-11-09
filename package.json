@@ -1,11 +1,11 @@
 {
-  "name": "my-app",
+  "name": "me-book",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@types/jest": "24.0.22",
-    "@types/node": "12.12.6",
-    "@types/react": "^16.9.11",
+    "@types/node": "12.12.7",
+    "@types/react": "16.9.11",
     "@types/react-dom": "16.9.4",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -16,8 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,11 +32,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@storybook/react": "^5.2.5",
-    "awesome-typescript-loader": "^5.2.1",
-    "react-docgen-typescript-loader": "^3.3.0",
-    "react-docgen-typescript-webpack-plugin": "^1.1.0"
   }
 }
