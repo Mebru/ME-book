@@ -1,9 +1,3 @@
-// import ME_Select from './single-select/ME_Select';
-// import GroupedSelect from './grouped-select/GroupedSelect';
-// import AsyncSelect from './async-select/AsyncSelect';
-
-// export default { ME_Select, GroupedSelect, AsyncSelect };
-
 import * as React from 'react';
 import { default as Select } from 'react-select';
 import { ISelectProps } from './single-select/types';
