@@ -22,10 +22,6 @@ class ME_Select extends React.Component<ISelectProps> {
     // menuIsOpen: false
   }
 
-  // constructor(props: ISelectProps) {
-  //   super(props);
-  // }
-
   //
   //#region Lifecycle Functions
   componentDidMount(): void {
@@ -59,37 +55,42 @@ class ME_Select extends React.Component<ISelectProps> {
   }
 
   public renderDropdown(): React.ReactNode {
-    const { id, className, selectType, options, components, ...rest } = this.props;
-
-    switch (selectType) {
+    switch (this.props.selectType) {
       case 'Default':
-        return (
-          <DropdownContainer id={'MEbook' + selectType + '_' + className}>
-            <Select
-              options={options}
-            />
-          </DropdownContainer>
-        );
+        return this._renderDefault();
       case 'SingleSelect':
-        return (
-          <DropdownContainer id={'ME-' + selectType} className={className}>
-            <Select options={options} components={{ SelectContainer, Control }} {...rest} />
-          </DropdownContainer>
-        );
+        return this._renderSingleSelect();
       case 'MultiSelect':
-        return (
-          <DropdownContainer id={'ME-' + selectType} className={className}>
-            <Select options={options} components={{ SelectContainer, Control }} isMulti={true} {...rest} />
-          </DropdownContainer>
-        );
+        return this._renderMultiSelect();
       default:
-        return (
-          <DropdownContainer id={'ME-' + selectType} className={className} >
-            <Select options={options} />
-          </DropdownContainer>
-        );
+        return this._renderDefault();
     }
   }
+
+  _renderDefault = (): React.ReactNode => {
+    const { selectType, options, className } = this.props;
+    return (
+      <DropdownContainer id={'MEbook' + selectType + '_' + className}>
+        <Select options={options} />
+      </DropdownContainer>
+    );
+  };
+  _renderSingleSelect = (): React.ReactNode => {
+    const { id, className, selectType, options, components, ...rest } = this.props;
+    return (
+      <DropdownContainer id={'ME-' + selectType} className={className}>
+        <Select options={options} components={{ SelectContainer, Control }} {...rest} />
+      </DropdownContainer>
+    );
+  };
+  _renderMultiSelect = (): React.ReactNode => {
+    const { id, className, selectType, options, components, ...rest } = this.props;
+    return (
+      <DropdownContainer id={'ME-' + selectType} className={className}>
+        <Select options={options} components={{ SelectContainer, Control }} isMulti={true} {...rest} />
+      </DropdownContainer>
+    );
+  };
 }
 
 // ME_Select.propTypes = {
