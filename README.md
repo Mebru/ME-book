@@ -43,4 +43,4 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-[![BCH compliance](https://bettercodehub.com/edge/badge/Mebru/ME-book?branch=master)](https://bettercodehub.com/) [![codebeat badge](https://codebeat.co/badges/1dfaabff-f8be-40f5-a98d-62ab00629344)](https://codebeat.co/projects/github-com-mebru-me-book-master)
+[![BCH compliance](https://bettercodehub.com/edge/badge/Mebru/ME-book?branch=master)](https://bettercodehub.com/) [![codebeat badge](https://codebeat.co/badges/1dfaabff-f8be-40f5-a98d-62ab00629344)](https://codebeat.co/projects/github-com-mebru-me-book-master) [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
